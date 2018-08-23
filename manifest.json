@@ -1,0 +1,34 @@
+{
+  "name": "AP cache",
+  "version": "0.1",
+  "description": "Lets your read",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.aftenposten.no/*"
+      ],
+      "js": [
+        "libs/jquery-3.2.1.min.js",
+        "go-cache.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://webcache.googleusercontent.com/*"
+      ],
+      "js": [
+        "libs/jquery-3.2.1.min.js",
+        "clean-google.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ],
+  "manifest_version": 2
+}
